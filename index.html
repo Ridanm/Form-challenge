@@ -1,46 +1,83 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Form for a challenge">
-        <meta name="ketwords" content="Html Css">
-        <meta name="name" content="Ridanm">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/Form_Style/form.css">
-        <title>Form Challenge</title>
-    </head>
 
-    <body id="body">
-            <h1 id="title">Formulario de Encuesta</h1>
-            <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Form for a challenge">
+    <meta name="ketwords" content="Html Css">
+    <meta name="name" content="Ridanm">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Form_Style/form.css">
+    <title>Form Challenge</title>
+</head>
 
-        <main id="main">
-            <form action="/action_page.php" method="POST" id="survey-form">            
+<body id="body">
+    <div>
+        <h1 id="title">Formulario de Encuesta</h1>
+        <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma freeCode</p>
+    </div>
+
+    <main id="main">
+        <form action="/action_page.php" method="POST" id="survey-form">
+            <div>
                 <label for="name" id="name-label">Nombre</label><br>
                 <input type="text" id="name" name="fname" placeholder="Ingrese su nombre" required><br>
+            </div>
 
+            <div>
                 <label for="email" id="email-label">Email</label><br>
                 <input type="email" id="email" name="email" placeholder="Ingrese su email" required><br>
+            </div>
 
+            <div>
                 <label for="number" id="number-label">Edad(opcional)</label><br>
                 <input type="number" id="number" name="age" min="16" max="100"><br>
+            </div>
 
-                <label for="dropdown-list">Cual opción describe su rol actual?</label><br>
-                <input id="dropdown-list" name="rol" list="dropdown" placeholder="Selecciona un rol" required>
-                    <datalist id="dropdown" name="rol">
-                        <option value="Estudiante">
-                        <option value="Trabajo de tiempo completo">
-                        <option value="Aprendiz se tiempo completo"> 
-                        <option value="En busca de nuevos caminos">
-                        <option value="Prefiero no contestar">
-                        <option value="Otros motivos">
-                        </datalist> 
-                
-                <label for=""></label>
-                
+            <div>
+                <label for="dropdown" id="dropdown-label">Cual opción describe su rol actualmente</label><br>
+                <select id="dropdown" name="rol" required>
+                    <option disabled selected option>Seleccione su rol actual</option>
+                    <option value="Student">Estudiante</option>
+                    <option value="fullTimeJob">Trabajo de tiempo completo</option>
+                    <option value="fullTimeLerner">Aprendiz de tiempo completo</option>
+                    <option value="preferNotSay">Prefiero no contestar</option>
+                    <option value="other">Otros</option>
+                    </select>
+            </div>
 
-            </form>
-        </main>
+            <div>
+                <p>Que tanto recomendarias freeCode a un amigo?</p>
 
-    </body>
+                <input type="radio" id="definitely" name="recommend" value="definitely">
+                <label for="definitely">Definitivamente</label><br>
+
+                <input type="radio" id="maybe" name="recommend" value="maybe">
+                <label for="maybe">Quizas</label><br>
+
+                <input type="radio" id="notsure" name="recommend" value="notsure">
+                <label for="notsure">No estoy seguro</label>
+            </div>
+
+            <div>
+                <label for="dropdown" id="dropdown-label">Cual es su caracteristica favorita en freeCode?</label><br>
+                <select name="dropdown" id="dropdown" required>
+                    <option disabled selected option>Seleccione una opción</option>
+                    <option value="challenge">Desafios</option>
+                    <option value="projects">Proyectos</option>
+                    <option value="comunity">Comunidad</option>
+                    <option value="openSource">Open Source</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+
+
+        </form>
+    </main>
+
+</body>
+
 </html>
