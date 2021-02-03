@@ -12,100 +12,120 @@
 </head>
 
 <body id="body">
-    <div  class="campos-formulario">
-        <h1 id="title">Formulario de Encuesta</h1>
-        <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma freeCode</p>
-    </div>
-
     <main id="main">
-        <form action="/action_page.php" method="POST" id="survey-form">
+        <div class="contenedor">
             <div class="campos-formulario">
-                <label for="name" id="name-label">Nombre</label><br>
-                <input type="text" id="name" name="fname" placeholder="Ingrese su nombre" required><br>
+                <haader id="header">
+                    <h1 id="title">Formulario de Encuesta</h1>
+                    <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma freeCode</p>
+                </haader>
             </div>
 
-            <div class="campos-formulario">
-                <label for="email" id="email-label">Email</label><br>
-                <input type="email" id="email" name="email" placeholder="Ingrese su email" required><br>
-            </div>
+            <form action="/action_page.php" method="POST" id="survey-form">
+                <div class="campos-formulario">
+                    <label for="name" id="name-label" >Nombre</label><br>
+                    <input type="text" id="name" name="fname" placeholder="Ingrese su nombre" required><br>
+                </div>
 
-            <div class="campos-formulario">
-                <label for="number" id="number-label">Edad(opcional)</label><br>
-                <input type="number" id="number" name="age" min="16" max="100"><br>
-            </div>
+                <div class="campos-formulario">
+                    <label for="email" id="email-label">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su email" required><br>
+                </div>
 
-            <div class="campos-formulario">
-                <label for="dropdown" id="dropdown-label">Cual opción describe su rol actualmente</label><br>
-                <select id="dropdown" name="rol"  class="opciones" required>
-                    <option disabled selected option>Seleccione su rol actual</option>
-                    <option value="Student">Estudiante</option>
-                    <option value="fullTimeJob">Trabajo de tiempo completo</option>
-                    <option value="fullTimeLerner">Aprendiz de tiempo completo</option>
-                    <option value="preferNotSay">Prefiero no contestar</option>
-                    <option value="other">Otros</option>
+                <div class="campos-formulario">
+                    <label for="number" id="number-label">Edad(opcional)</label><br>
+                    <input type="number" id="number" name="age" min="16" max="100"><br>
+                </div>
+
+                <div class="campos-formulario">
+                    <label for="dropdown" id="dropdown-label">Cual opción describe su rol actualmente</label><br>
+                    <select id="dropdown" name="rol" class="opciones" required>
+                        <option disabled selected option>Seleccione su rol actual</option>
+                        <option value="Student">Estudiante</option>
+                        <option value="fullTimeJob">Trabajo de tiempo completo</option>
+                        <option value="fullTimeLerner">Aprendiz de tiempo completo</option>
+                        <option value="preferNotSay">Prefiero no contestar</option>
+                        <option value="other">Otros</option>
                     </select>
-            </div>
+                </div>
 
-            <div class="campos-formulario">
-                <p>Que tanto recomendarias freeCode a un amigo?</p>
+                <div class="campos-formulario">
+                    <p>Que tanto recomendarias freeCode a un amigo?</p>
 
-                <input type="radio" id="definitely" name="recommend" value="definitely">
-                <label for="definitely">Definitivamente</label><br>
+                    <input type="radio" id="definitely" name="recommend" value="definitely">
+                    <label for="definitely">Definitivamente</label><br>
 
-                <input type="radio" id="maybe" name="recommend" value="maybe">
-                <label for="maybe">Quizas</label><br>
+                    <input type="radio" id="maybe" name="recommend" value="maybe">
+                    <label for="maybe">Quizas</label><br>
 
-                <input type="radio" id="notsure" name="recommend" value="notsure">
-                <label for="notsure">No estoy seguro</label>
-            </div>
+                    <input type="radio" id="notsure" name="recommend" value="notsure">
+                    <label for="notsure">No estoy seguro</label>
+                </div>
 
-            <div class="campos-formulario">
-                <label for="dropdown-under" id="dropdown-label">Cual es su caracteristica favorita en freeCode?</label><br>
-                <select name="dropdown-under" id="dropdown-under" class="opciones"required>
-                    <option disabled selected option>Seleccione una opción</option>
-                    <option value="challenge">Desafios</option>
-                    <option value="projects">Proyectos</option>
-                    <option value="comunity">Comunidad</option>
-                    <option value="openSource">Open Source</option>
-                </select>
-            </div>
+                <div class="campos-formulario">
+                    <label for="dropdown-under" id="dropdown-label">Cual es su caracteristica favorita en
+                        freeCode?</label><br>
+                    <select name="dropdown-under" id="dropdown-under" class="opciones" required>
+                        <option disabled selected option>Seleccione una opción</option>
+                        <option value="challenge">Desafios</option>
+                        <option value="projects">Proyectos</option>
+                        <option value="comunity">Comunidad</option>
+                        <option value="openSource">Open Source</option>
+                    </select>
+                </div>
 
-            <div class="campos-formulario">
-                <p>En que le gustaria ver mejoras o nuevas implementaciones? <i>(puede seleccionar cuantas quiera)</i>
-                </p>
-                <label for="front-end-p" class="mejoras-label"><input type="checkbox" name="mejoras" id="front-end-p" class="mejoras-input" value="front-end-proyects">Front-end Projects</label><br>
-                 
-                <label for="back-end-p" class="mejoras-label"><input type="checkbox" name="mejoras" id="back-end-p" class="mejoras-input" value="back-end-projects">Back-end Projects</label><br>
+                <div class="campos-formulario">
+                    <p>En que le gustaria ver mejoras o nuevas implementaciones? <i>(puede seleccionar cuantas
+                            quiera)</i>
+                    </p>
+                    <label for="front-end-p" class="mejoras-label"><input type="checkbox" name="mejoras"
+                            id="front-end-p" class="mejoras-input" value="front-end-proyects">Front-end
+                        Projects</label><br>
 
-                <label for="data-visualization" class="mejoras-label"><input type="checkbox" name="mejoras" id="data-visualization" class="mejoras-input" value="data-visualization">Visualizacion de Datos</label><br>
+                    <label for="back-end-p" class="mejoras-label"><input type="checkbox" name="mejoras" id="back-end-p"
+                            class="mejoras-input" value="back-end-projects">Back-end Projects</label><br>
 
-                <label for="challenge" class="mejoras-label"><input type="checkbox" name="mejoras" id="challenge" class="mejoras-input" value="challenge">Desafios</label><br>
+                    <label for="data-visualization" class="mejoras-label"><input type="checkbox" name="mejoras"
+                            id="data-visualization" class="mejoras-input" value="data-visualization">Visualizacion de
+                        Datos</label><br>
 
-                <label for="open-source" class="mejoras-label"><input type="checkbox" name="mejoras" id="open-source" class="mejoras-input" value="open-source-community">Comunidad de Código Abierto</label><br>
+                    <label for="challenge" class="mejoras-label"><input type="checkbox" name="mejoras" id="challenge"
+                            class="mejoras-input" value="challenge">Desafios</label><br>
 
-                <label for="help-rooms" class="mejoras-label"><input type="checkbox" name="mejoras" id="help-rooms" class="mejoras-input" value="gitter-help-rooms">Salas de ayuda de Git</label><br>
+                    <label for="open-source" class="mejoras-label"><input type="checkbox" name="mejoras"
+                            id="open-source" class="mejoras-input" value="open-source-community">Comunidad de Código
+                        Abierto</label><br>
 
-                <label for="videos" class="mejoras-label"><input type="checkbox" name="mejoras" id="videos" class="mejoras-input" value="videos">Videos</label><br>
+                    <label for="help-rooms" class="mejoras-label"><input type="checkbox" name="mejoras" id="help-rooms"
+                            class="mejoras-input" value="gitter-help-rooms">Salas de ayuda de Git</label><br>
 
-                <label for="city-meetups" class="mejoras-label"><input type="checkbox" name="mejoras" id="city-meetups" class="mejoras-input" value="city-meetups">Reuniones en la ciudad</label><br>
+                    <label for="videos" class="mejoras-label"><input type="checkbox" name="mejoras" id="videos"
+                            class="mejoras-input" value="videos">Videos</label><br>
 
-                <label for="wiki" class="mejoras-label"><input type="checkbox" name="mejoras" id="wiki" class="mejoras-input" value="wiki">wiki</label><br>
+                    <label for="city-meetups" class="mejoras-label"><input type="checkbox" name="mejoras"
+                            id="city-meetups" class="mejoras-input" value="city-meetups">Reuniones en la
+                        ciudad</label><br>
 
-                <label for="forum" class="mejoras-label"><input type="checkbox" name="mejoras" id="forum" class="mejoras-input" value="forum">Foros</label><br>
+                    <label for="wiki" class="mejoras-label"><input type="checkbox" name="mejoras" id="wiki"
+                            class="mejoras-input" value="wiki">wiki</label><br>
 
-                <label for="additional-courses" class="mejoras-label"><input type="checkbox" name="mejoras" id="additional-courses" class="mejoras-input" value="additional-courses">Cursos Adicionales</label>
-            </div>
+                    <label for="forum" class="mejoras-label"><input type="checkbox" name="mejoras" id="forum"
+                            class="mejoras-input" value="forum">Foros</label><br>
 
-            <div class="campos-formulario">
-                <label for="text-area">Algún comentario o sugerencia?</label><br>
-                <textarea id="text-area" name="text-area" placeholder="Comentar"></textarea>
-            </div>
+                    <label for="additional-courses" class="mejoras-label"><input type="checkbox" name="mejoras"
+                            id="additional-courses" class="mejoras-input" value="additional-courses">Cursos
+                        Adicionales</label>
+                </div>
 
-            <div class="campos-formulario">
-                <input type="submit" value="Enviar">
-            </div>
+                <div class="campos-formulario">
+                    <label for="text-area">Algún comentario o sugerencia?</label><br>
+                    <textarea id="text-area" name="text-area" placeholder="Comentar"></textarea>
+                </div>
 
-
+                <div class="campos-formulario">
+                    <input type="submit" value="Enviar">
+                </div>
+        </div>
         </form>
     </main>
 
