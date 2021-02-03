@@ -12,31 +12,31 @@
 </head>
 
 <body id="body">
-    <div>
+    <div  class="campos-formulario">
         <h1 id="title">Formulario de Encuesta</h1>
         <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma freeCode</p>
     </div>
 
     <main id="main">
         <form action="/action_page.php" method="POST" id="survey-form">
-            <div>
+            <div class="campos-formulario">
                 <label for="name" id="name-label">Nombre</label><br>
                 <input type="text" id="name" name="fname" placeholder="Ingrese su nombre" required><br>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <label for="email" id="email-label">Email</label><br>
                 <input type="email" id="email" name="email" placeholder="Ingrese su email" required><br>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <label for="number" id="number-label">Edad(opcional)</label><br>
                 <input type="number" id="number" name="age" min="16" max="100"><br>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <label for="dropdown" id="dropdown-label">Cual opción describe su rol actualmente</label><br>
-                <select id="dropdown" name="rol" required>
+                <select id="dropdown" name="rol"  class="opciones" required>
                     <option disabled selected option>Seleccione su rol actual</option>
                     <option value="Student">Estudiante</option>
                     <option value="fullTimeJob">Trabajo de tiempo completo</option>
@@ -46,7 +46,7 @@
                     </select>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <p>Que tanto recomendarias freeCode a un amigo?</p>
 
                 <input type="radio" id="definitely" name="recommend" value="definitely">
@@ -59,9 +59,9 @@
                 <label for="notsure">No estoy seguro</label>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <label for="dropdown-under" id="dropdown-label">Cual es su caracteristica favorita en freeCode?</label><br>
-                <select name="dropdown-under" id="dropdown" required>
+                <select name="dropdown-under" id="dropdown-under" class="opciones"required>
                     <option disabled selected option>Seleccione una opción</option>
                     <option value="challenge">Desafios</option>
                     <option value="projects">Proyectos</option>
@@ -70,7 +70,7 @@
                 </select>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <p>En que le gustaria ver mejoras o nuevas implementaciones? <i>(puede seleccionar cuantas quiera)</i>
                 </p>
                 <label for="front-end-p" class="mejoras-label"><input type="checkbox" name="mejoras" id="front-end-p" class="mejoras-input" value="front-end-proyects">Front-end Projects</label><br>
@@ -96,12 +96,12 @@
                 <label for="additional-courses" class="mejoras-label"><input type="checkbox" name="mejoras" id="additional-courses" class="mejoras-input" value="additional-courses">Cursos Adicionales</label>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <label for="text-area">Algún comentario o sugerencia?</label><br>
                 <textarea id="text-area" name="text-area" placeholder="Comentar"></textarea>
             </div>
 
-            <div>
+            <div class="campos-formulario">
                 <input type="submit" value="Enviar">
             </div>
 
