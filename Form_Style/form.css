@@ -7,25 +7,13 @@
 }
 
 #body{
-    /*!background-image: url(https://image.freepik.com/foto-gratis/codigo-fuente-escritorio-papel-tapiz-lenguaje-computadora-codificacion-programacion_33771-595.jpg);*/
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url(https://image.freepik.com/foto-gratis/codigo-fuente-escritorio-papel-tapiz-lenguaje-computadora-codificacion-programacion_33771-595.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #ff851b;
     color: rgb(255, 255, 255);
     
 }
-
-/*body::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(68, 41, 189);
-    z-index: -1;
-}*/
 
 .contenedor{
     display: flex;
@@ -45,7 +33,7 @@
 }
 
 #survey-form{
-    background: rgba(0,0,0,0.6);
+    background: rgba(58, 9, 122, 0.6);
     width: 100%;
     max-width: 750px;
     margin: auto;
@@ -75,7 +63,7 @@ font-size: 1.1rem;
 .input-checkbox,
 .input-radio{
     transform: scale(1.5);
-    margin-right: 12px;
+    margin-right: 15px;
 }
 
 .text-area{
@@ -95,6 +83,26 @@ font-size: 1.1rem;
     font-size: 1.2rem;
 }
 
+.submit-button:hover{
+    background-color: rgb(34, 173, 80);
+}
+
 .contenedor-form{
     margin: 5px 0 22px 0;
+}
+
+@media (max-width: 768px){
+    .contenedor{
+        width: 100%;
+        max-width: 95%;
+        margin: auto;
+    }
+}
+ 
+@media(max-width: 425px){
+    .contenedor{
+        width: 100%;
+        max-width: 95%;
+        margin: auto;
+    }
 }
