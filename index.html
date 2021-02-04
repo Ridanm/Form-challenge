@@ -14,7 +14,7 @@
 <body id="body">
     <main id="main">
         <div class="contenedor">
-            <div class="campos-formulario">
+            <div class="contenedor-form">
                 <haader id="header">
                     <h1 id="title">Formulario de Encuesta</h1>
                     <p id="description">Agradecemos su tiempo para ayudarnos a mejorar la plataforma freeCode</p>
@@ -22,23 +22,23 @@
             </div>
 
             <form action="/action_page.php" method="POST" id="survey-form">
-                <div class="campos-formulario">
-                    <label for="name" id="name-label" >Nombre</label><br>
-                    <input type="text" id="name" name="fname" placeholder="Ingrese su nombre" required><br>
+                <div class="contenedor-form">
+                    <label for="name" id="name-label class="form-label" >Nombre</label>
+                    <input type="text" id="name" class="form-input" name="fname" placeholder="Ingrese su nombre" required>
                 </div>
 
-                <div class="campos-formulario">
-                    <label for="email" id="email-label">Email</label><br>
-                    <input type="email" id="email" name="email" placeholder="Ingrese su email" required><br>
+                <div class="contenedor-form">
+                    <label for="email" id="email-label class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" name="email" placeholder="Ingrese su email" required>
                 </div>
 
-                <div class="campos-formulario">
-                    <label for="number" id="number-label">Edad(opcional)</label><br>
-                    <input type="number" id="number" name="age" min="16" max="100"><br>
+                <div class="contenedor-form">
+                    <label for="number" id="number-label class="form-label">Edad(opcional)</label>
+                    <input type="number" id="number" class="form-input" name="age" min="16" max="100">
                 </div>
 
-                <div class="campos-formulario">
-                    <label for="dropdown" id="dropdown-label">Cual opción describe su rol actualmente</label><br>
+                <div class="contenedor-form">
+                    <label for="dropdown" id="dropdown-label class="form-label">Cual opción describe su rol actualmente</label>
                     <select id="dropdown" name="rol" class="opciones" required>
                         <option disabled selected option>Seleccione su rol actual</option>
                         <option value="Student">Estudiante</option>
@@ -49,22 +49,19 @@
                     </select>
                 </div>
 
-                <div class="campos-formulario">
+                <div class="contenedor-form contenedor-radio">
                     <p>Que tanto recomendarias freeCode a un amigo?</p>
+             
+                    <label for="definitely" class="radio-label"><input type="radio" id="definitely" class="input-radio" name="recommend" value="definitely"> Definitivamente</label>
+ 
+                    <label for="maybe" class="radio-label"><input type="radio" id="maybe" class="input-radio" name="recommend" value="maybe"> Quizas</label>
 
-                    <input type="radio" id="definitely" name="recommend" value="definitely">
-                    <label for="definitely">Definitivamente</label><br>
-
-                    <input type="radio" id="maybe" name="recommend" value="maybe">
-                    <label for="maybe">Quizas</label><br>
-
-                    <input type="radio" id="notsure" name="recommend" value="notsure">
-                    <label for="notsure">No estoy seguro</label>
+                    <label for="notsure" class="radio-label"> <input type="radio" id="notsure" class="input-radio" name="recommend" value="notsure"> No estoy seguro</label>
                 </div>
 
-                <div class="campos-formulario">
-                    <label for="dropdown-under" id="dropdown-label">Cual es su caracteristica favorita en
-                        freeCode?</label><br>
+                <div class="contenedor-form">
+                    <label for="dropdown-under" id="dropdown-label" class="form-label">Cual es su caracteristica favorita en
+                        freeCode?</label>
                     <select name="dropdown-under" id="dropdown-under" class="opciones" required>
                         <option disabled selected option>Seleccione una opción</option>
                         <option value="challenge">Desafios</option>
@@ -74,56 +71,56 @@
                     </select>
                 </div>
 
-                <div class="campos-formulario">
+                <div class="contenedor-form">
                     <p>En que le gustaria ver mejoras o nuevas implementaciones? <i>(puede seleccionar cuantas
                             quiera)</i>
                     </p>
-                    <label for="front-end-p" class="mejoras-label"><input type="checkbox" name="mejoras"
-                            id="front-end-p" class="mejoras-input" value="front-end-proyects">Front-end
-                        Projects</label><br>
+                    <label for="front-end-p" class="checkbox-label"><input type="checkbox" name="mejoras"
+                            id="front-end-p" class="input-checkbox" value="front-end-proyects"> Front-end
+                        Projects</label>
 
-                    <label for="back-end-p" class="mejoras-label"><input type="checkbox" name="mejoras" id="back-end-p"
-                            class="mejoras-input" value="back-end-projects">Back-end Projects</label><br>
+                    <label for="back-end-p" class="checkbox-label"><input type="checkbox" name="mejoras" id="back-end-p"
+                            class="input-checkbox" value="back-end-projects"> Back-end Projects</label>
 
-                    <label for="data-visualization" class="mejoras-label"><input type="checkbox" name="mejoras"
-                            id="data-visualization" class="mejoras-input" value="data-visualization">Visualizacion de
-                        Datos</label><br>
+                    <label for="data-visualization" class="checkbox-label"><input type="checkbox" name="mejoras"
+                            id="data-visualization" class="input-checkbox" value="data-visualization"> Visualizacion de
+                        Datos</label>
 
-                    <label for="challenge" class="mejoras-label"><input type="checkbox" name="mejoras" id="challenge"
-                            class="mejoras-input" value="challenge">Desafios</label><br>
+                    <label for="challenge" class="checkbox-label"><input type="checkbox" name="mejoras" id="challenge"
+                            class="input-checkbox" value="challenge"> Desafios</label>
 
-                    <label for="open-source" class="mejoras-label"><input type="checkbox" name="mejoras"
-                            id="open-source" class="mejoras-input" value="open-source-community">Comunidad de Código
-                        Abierto</label><br>
+                    <label for="open-source" class="checkbox-label"><input type="checkbox" name="mejoras"
+                            id="open-source" class="mejinput-checkbox" value="open-source-community"> Comunidad de Código
+                        Abierto</label>
 
-                    <label for="help-rooms" class="mejoras-label"><input type="checkbox" name="mejoras" id="help-rooms"
-                            class="mejoras-input" value="gitter-help-rooms">Salas de ayuda de Git</label><br>
+                    <label for="help-rooms" class="checkbox-label"><input type="checkbox" name="mejoras" id="help-rooms"
+                            class="input-checkbox" value="gitter-help-rooms"> Salas de ayuda de Git</label>
 
-                    <label for="videos" class="mejoras-label"><input type="checkbox" name="mejoras" id="videos"
-                            class="mejoras-input" value="videos">Videos</label><br>
+                    <label for="videos" class="checkbox-label"><input type="checkbox" name="mejoras" id="videos"
+                            class="input-checkbox" value="videos">Videos</label>
 
-                    <label for="city-meetups" class="mejoras-label"><input type="checkbox" name="mejoras"
-                            id="city-meetups" class="mejoras-input" value="city-meetups">Reuniones en la
-                        ciudad</label><br>
+                    <label for="city-meetups" class="checkbox-label"><input type="checkbox" name="mejoras"
+                            id="city-meetups" class="input-checkbox" value="city-meetups"> Reuniones en la
+                        ciudad</label>
 
-                    <label for="wiki" class="mejoras-label"><input type="checkbox" name="mejoras" id="wiki"
-                            class="mejoras-input" value="wiki">wiki</label><br>
+                    <label for="wiki" class="checkbox-label"><input type="checkbox" name="mejoras" id="wiki"
+                            class="input-checkbox" value="wiki"> wiki</label>
 
-                    <label for="forum" class="mejoras-label"><input type="checkbox" name="mejoras" id="forum"
-                            class="mejoras-input" value="forum">Foros</label><br>
+                    <label for="forum" class="checkbox-label"><input type="checkbox" name="mejoras" id="forum"
+                            class="input-checkbox" value="forum"> Foros</label>
 
-                    <label for="additional-courses" class="mejoras-label"><input type="checkbox" name="mejoras"
-                            id="additional-courses" class="mejoras-input" value="additional-courses">Cursos
+                    <label for="additional-courses" class="checkbox-label"><input type="checkbox" name="mejoras"
+                            id="additional-courses" class="input-checkbox" value="additional-courses"> Cursos
                         Adicionales</label>
                 </div>
 
-                <div class="campos-formulario">
-                    <label for="text-area">Algún comentario o sugerencia?</label><br>
-                    <textarea id="text-area" name="text-area" placeholder="Comentar"></textarea>
+                <div class="contenedor-form">
+                    <label for="text-area" class="form-label">Algún comentario o sugerencia?</label>
+                    <textarea id="text-area" class="text-area" name="text-area" placeholder="Comentar"></textarea>
                 </div>
 
-                <div class="campos-formulario">
-                    <input type="submit" value="Enviar">
+                <div class="contenedor-form">
+                    <input type="submit" value="Enviar" class="submit-button">
                 </div>
         </div>
         </form>

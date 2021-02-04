@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 *{
     margin: 0;
@@ -11,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: orange;
+    background-color: #ff851b;
     color: rgb(255, 255, 255);
     
 }
@@ -35,20 +35,60 @@
 #header{
     display: block;
     text-align: center;
-    padding: 5% 2% ;
+    padding: 2% ;
     width: 100%;
     
+}
+
+#description{
+    font-size: 1.5rem;
 }
 
 #survey-form{
     background: rgba(0,0,0,0.6);
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
     margin: auto;
     padding: 5%;
     border-radius: 5px;
     font-size: 1.2rem;
-    font-family: 'Sriracha', cursive;
+    font-family: 'Yusei Magic', sans-serif;
     font-weight: 100;
+} 
+
+.form-input,
+.opciones{
+width: 100%;
+height: 3rem;
+border: none;
+border-radius: 8px;
+padding-left: 10px;
+font-size: 1.1rem;
 }
 
+.form-input,
+.radio-label, 
+.checkbox-label{
+    display: block;
+}
+
+.text-area{
+    width: 100%;
+    height: 8rem;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.submit-button{
+    width: 100%;
+    height: 3rem;
+    border-radius: 8px;
+    background-color:#4cc065;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.contenedor-form{
+    margin: 5px 0 22px 0;
+}
